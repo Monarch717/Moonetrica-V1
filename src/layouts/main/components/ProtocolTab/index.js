@@ -5,10 +5,10 @@
 */
 import AppBar from "@mui/material/AppBar";
 // @mui material components
-import Card from "@mui/material/Card";
 import Grid from "@mui/material/Grid";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
+import { Card, LinearProgress, Stack } from "@mui/material";
 // Images
 import burceMars from "assets/images/avatar-simmmple.png";
 // Moonetrica Dashboard React base styles
@@ -21,10 +21,13 @@ import PriceCard from "../PriceCard";
 import { IoCube } from "react-icons/io5";
 import { IoDocument } from "react-icons/io5";
 import { IoBuild } from "react-icons/io5";
+
 // Moonetrica Dashboard React example components
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { useEffect, useState } from "react";
 import PriceCardList from "../PriceCardList";
+import PortfolioExposure from "../PortfolioExposure";
+import AssetAllocation from "../AssetAllocation";
 
 function ProtocolTab() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -69,10 +72,27 @@ function ProtocolTab() {
         </AppBar>
       </Grid>
       {tabValue === 0 &&
-      <PriceCardList />
+      <Grid>
+        <PriceCardList />
+        <VuiBox
+          mb={3}
+        >
+          <Grid container spacing="18px">
+            <Grid item xs={12} md={12} lg={6} xl={6} xxl={6}>
+              <PortfolioExposure />
+            </Grid>
+            <Grid item xs={12} md={12} lg={6} xl={6} xxl={6}>
+              <AssetAllocation />
+            </Grid>
+          </Grid>
+        </VuiBox>
+        <VuiBox mb={3}>
+
+        </VuiBox>
+      </Grid>
       }
-      {tabValue === 1 && <Grid item>1</Grid>}
-      {tabValue === 2 && <Grid item>2</Grid>}
+      {tabValue === 1 && <PriceCardList />}
+      {tabValue === 2 && <PriceCardList />}
     </VuiBox>
   );
 }

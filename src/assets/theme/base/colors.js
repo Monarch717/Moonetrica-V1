@@ -145,9 +145,9 @@ export default {
     },
 
     cardDark: {
-      deg: "126.97",
-      main: "rgba(6, 11, 40, 0.74) 28.26%",
-      state: "rgba(10, 14, 35, 0.71) 91.2%",
+      deg: "0",
+      main: "rgba(255, 255, 255, 0.05) 100%",
+      state: "rgba(10, 14, 35, 0.71) 0%",
     },
 
     cardLight: {
