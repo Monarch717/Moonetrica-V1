@@ -1,22 +1,10 @@
 /*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Moonetrica Dashboard - v1.0.0
 
 */
 
-// Vision UI Dashboard React components
+// Moonetrica Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 
@@ -37,7 +25,7 @@ function Footer() {
           sx={{ textAlign: "center", fontWeight: "400 !important" }}
           color="white"
         >
-          @ 2021, Made with ❤️&nbsp;&nbsp;&nbsp; by{" "}
+          @ 2022, Moonetrica ❤️&nbsp;&nbsp;&nbsp; by{" "}
           <VuiTypography
             component="a"
             variant="button"
@@ -46,7 +34,7 @@ function Footer() {
             color="white"
             mr="2px"
           >
-            Simmmple
+            Denis
           </VuiTypography>
           &
           <VuiTypography
@@ -58,9 +46,9 @@ function Footer() {
             sx={{ textAlign: "center", fontWeight: "500 !important" }}
             color="white"
           >
-            Creative Tim
+            Thomas
           </VuiTypography>
-          for a better web
+          for Multi-Chain DeFi
         </VuiTypography>
       </VuiBox>
       <VuiBox item xs={10}>

@@ -1,18 +1,6 @@
 /*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Moonetrica Dashboard - v1.0.0
 
 */
 
@@ -26,7 +14,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import Icon from "@mui/material/Icon";
 
-// Vision UI Dashboard React components
+// Moonetrica Dashboard React components
 import VuiBox from "components/VuiBox";
 
 // Custom styles for the SidenavCollapse
@@ -37,7 +25,7 @@ import {
   collapseText,
 } from "examples/Sidenav/styles/sidenavCollapse";
 
-// Vision UI Dashboard React context
+// Moonetrica Dashboard React context
 import { useVisionUIController } from "context";
 
 function SidenavCollapse({ color, icon, name, children, active, noCollapse, open, ...rest }) {

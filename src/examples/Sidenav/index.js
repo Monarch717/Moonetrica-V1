@@ -1,18 +1,6 @@
 /*!
 
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+Moonetrica Dashboard - v1.0.0
 
 */
 
@@ -30,12 +18,12 @@ import Divider from "@mui/material/Divider";
 import Link from "@mui/material/Link";
 import Icon from "@mui/material/Icon";
 
-// Vision UI Dashboard React components
+// Moonetrica Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiButton from "components/VuiButton";
 
-// Vision UI Dashboard React example components
+// Moonetrica Dashboard React example components
 import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 import SidenavCard from "examples/Sidenav/SidenavCard";
 
@@ -43,10 +31,10 @@ import SidenavCard from "examples/Sidenav/SidenavCard";
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
 
-// Vision UI Dashboard React context
+// Moonetrica Dashboard React context
 import { useVisionUIController, setMiniSidenav, setTransparentSidenav } from "context";
 
-// Vision UI Dashboard React icons
+// Moonetrica Dashboard React icons
 import SimmmpleLogo from "examples/Icons/SimmmpleLogo";
 
 // function Sidenav({ color, brand, brandName, routes, ...rest }) {
