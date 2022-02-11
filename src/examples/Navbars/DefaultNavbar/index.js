@@ -104,7 +104,7 @@ function DefaultNavbar({ transparent, light, action }) {
               margin: "0 auto",
             }}
           >
-            VISION UI FREE
+            Moonetrica FREE
           </VuiTypography>
         </VuiBox>
         <VuiBox color="inherit" display={{ xs: "none", lg: "flex" }} m={0} p={0}>

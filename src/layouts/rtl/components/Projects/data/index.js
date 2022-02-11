@@ -63,7 +63,7 @@ export default function data() {
           <VuiBox display="flex" alignItems="center">
             <AdobeXD size="20px" />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
-              إصدار Vision UI XD
+              إصدار Moonetrica XD
             </VuiTypography>
           </VuiBox>
         ),

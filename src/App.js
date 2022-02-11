@@ -36,6 +36,9 @@ import routes from "routes";
 // Moonetrica Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
+//Custom Css
+import "./assets/style/custom.css";
+
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
   const { miniSidenav, direction, layout, openConfigurator, sidenavColor } = controller;
@@ -128,8 +131,8 @@ export default function App() {
           <>
             <Sidenav
               color={sidenavColor}
-              brand=""
-              brandName="VISION UI FREE"
+              brand="logo"
+              brandName=""
               routes={routes}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
@@ -152,8 +155,8 @@ export default function App() {
         <>
           <Sidenav
             color={sidenavColor}
-            brand=""
-            brandName="VISION UI FREE"
+            brand="logo"
+            brandName=""
             routes={routes}
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
