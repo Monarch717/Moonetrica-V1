@@ -4,7 +4,7 @@
 
 ![Product Gif](https://i.ibb.co/3c5RJhh/Dashboard.png)
 
-##The main features:
+###The main features:
 - connecting wallet and displaying information about all defi pools where user placed tokens.
 - display of analytics, how the price has changed, how profitability indicators in money and in % have changed, how amount of tokens change in liquidity pools
 - make it possible to collect reward from the pools (collect token that you earned)
