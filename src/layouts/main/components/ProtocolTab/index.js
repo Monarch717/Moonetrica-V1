@@ -16,6 +16,10 @@ import { IoCube } from "react-icons/io5";
 import { IoDocument } from "react-icons/io5";
 import { IoBuild } from "react-icons/io5";
 
+import allCoin from "assets/images/small-logos/all-coin.png";
+import EthLogo from "assets/images/small-logos/icons8-ethereum.png";
+import PolygonLogo from "assets/images/small-logos/icon-polygon.png";
+
 // Moonetrica Dashboard React example components
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import { useEffect, useState } from "react";
@@ -64,9 +68,9 @@ function ProtocolTab() {
             onChange={handleSetTabValue}
             sx={{ background: "transparent", display: "flex", justifyContent: "flex-start", paddingBottom: 0 }}
           >
-            <Tab label="All" icon={<IoCube color="white" size="16px" />} value={0} />
-            <Tab label="Ethereum" icon={<IoDocument color="white" size="16px" />} value={1} />
-            <Tab label="Polygon" icon={<IoBuild color="white" size="16px" />} value={2} />
+            <Tab label="All" icon={<img src={allCoin} />} value={0} />
+            <Tab label="Ethereum" icon={<img src={EthLogo} />} value={1} />
+            <Tab label="Polygon" icon={<img src={PolygonLogo} />} value={2} />
           </Tabs>
         </AppBar>
       </Grid>
