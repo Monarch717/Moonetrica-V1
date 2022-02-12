@@ -39,6 +39,8 @@ import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "cont
 //Custom Css
 import "./assets/style/custom.css";
 
+import "@fontsource/raleway/";
+
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
   const { miniSidenav, direction, layout, openConfigurator, sidenavColor } = controller;
@@ -137,11 +139,11 @@ export default function App() {
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
             />
-            <Configurator />
-            {configsButton}
+            {/*<Configurator />*/}
+            {/*{configsButton}*/}
           </>
         )}
-        {layout === "vr" && <Configurator />}
+        {/*{layout === "vr" && <Configurator />}*/}
         <Switch>
           {getRoutes(routes)}
           <Redirect from="*" to="/dashboard" />
@@ -161,11 +163,11 @@ export default function App() {
             onMouseEnter={handleOnMouseEnter}
             onMouseLeave={handleOnMouseLeave}
           />
-          <Configurator />
-          {configsButton}
+          {/*<Configurator />*/}
+          {/*{configsButton}*/}
         </>
       )}
-      {layout === "vr" && <Configurator />}
+      {/*{layout === "vr" && <Configurator />}*/}
       <Switch>
         {getRoutes(routes)}
         <Redirect from="*" to="/dashboard" />

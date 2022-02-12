@@ -27,7 +27,6 @@ function Main() {
     <DashboardLayout>
       <DashboardNavbar />
       <ProtocolTab />
-      <Footer />
     </DashboardLayout>
   );
 }

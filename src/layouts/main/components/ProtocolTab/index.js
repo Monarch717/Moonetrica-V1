@@ -28,6 +28,8 @@ import { useEffect, useState } from "react";
 import PriceCardList from "../PriceCardList";
 import PortfolioExposure from "../PortfolioExposure";
 import AssetAllocation from "../AssetAllocation";
+import Wallet from "../wallet";
+import DefiNames from "../DefiNames";
 
 function ProtocolTab() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
@@ -65,9 +67,9 @@ function ProtocolTab() {
             onChange={handleSetTabValue}
             sx={{ background: "transparent", display: "flex", justifyContent: "flex-start", paddingBottom: 0 }}
           >
-            <Tab label="OVERVIEW" icon={<IoCube color="white" size="16px" />} value={0} />
-            <Tab label="TEAMS" icon={<IoDocument color="white" size="16px" />} value={1} />
-            <Tab label="PROJECTS" icon={<IoBuild color="white" size="16px" />} value={2} />
+            <Tab label="All" icon={<IoCube color="white" size="16px" />} value={0} />
+            <Tab label="Ethereum" icon={<IoDocument color="white" size="16px" />} value={1} />
+            <Tab label="Polygon" icon={<IoBuild color="white" size="16px" />} value={2} />
           </Tabs>
         </AppBar>
       </Grid>
@@ -87,7 +89,10 @@ function ProtocolTab() {
           </Grid>
         </VuiBox>
         <VuiBox mb={3}>
-
+          <Wallet/>
+        </VuiBox>
+        <VuiBox mb={3}>
+          <DefiNames/>
         </VuiBox>
       </Grid>
       }

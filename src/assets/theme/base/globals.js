@@ -15,7 +15,8 @@ export default {
     background: dark.body,
   },
   body: {
-    background: `url(${bgAdmin})`,
+    // background: `url(${bgAdmin})`,
+    background: 'linear-gradient(107.54deg, #25253C 0%, #274054 0.01%, #050118 100%)',
     backgroundSize: "cover",
   },
   "*, *::before, *::after": {

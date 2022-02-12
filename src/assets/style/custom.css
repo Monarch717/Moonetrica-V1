@@ -2,6 +2,21 @@
 Custom css of Moonetrica
  */
 
+html{
+    background: linear-gradient(107.54deg, #25253C 0%, #274054 0.01%, #050118 100%)!important;
+}
+body{
+
+
+    min-height: 100vh;
+}
+
+/* Font Raleway*/
+body, button, .MuiBox-root, .MuiTypography-root{
+    font-family: "Raleway" !important;
+    font-style: normal !important;
+}
+
 /*Tabs Style*/
 .MuiTabs-indicator{
     background-color: transparent!important;
@@ -21,4 +36,43 @@ Custom css of Moonetrica
     font-weight: bold!important;
     border-bottom: 3px solid;
     border-color: white;
+}
+
+/*SideNav Style*/
+.active .MuiListItem-root .MuiBox-root{
+    background:transparent!important;
+    backdrop-filter: unset;
+    box-shadow: none;
+
+}
+.MuiListItem-root .MuiBox-root .MuiListItemIcon-root{
+    background: transparent;
+    backdrop-filter: unset;
+    box-shadow: none;
+}
+.MuiListItem-root .MuiBox-root .MuiListItemIcon-root svg{
+    fill: #FFFFFF;
+    opacity: 0.5;
+    backdrop-filter: unset;
+}
+.active .MuiListItem-root .MuiBox-root .MuiListItemIcon-root svg{
+    fill: #FFFFFF;
+    opacity: 1;
+    backdrop-filter: unset;
+}
+.MuiListItem-root .MuiBox-root .MuiTypography-root{
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+.active .MuiListItem-root .MuiBox-root .MuiTypography-root{
+    color: #FFFFFF;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    backdrop-filter: unset;
+    box-shadow: none;
 }

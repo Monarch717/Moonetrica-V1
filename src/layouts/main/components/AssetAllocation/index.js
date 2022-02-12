@@ -40,15 +40,7 @@ function AssetAllocation() {
           <VuiTypography variant="lg" color="white" mr="auto" fontWeight="bold">
             Asset Allocation
           </VuiTypography>
-          <VuiBox
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            bgColor="#22234B"
-            sx={{ width: "37px", height: "37px", cursor: "pointer", borderRadius: "12px" }}
-          >
-            <FaEllipsisH color={info.main} size="18px" />
-          </VuiBox>
+
         </VuiBox>
         <VuiBox
           display="flex"
