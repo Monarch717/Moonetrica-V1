@@ -1,4 +1,3 @@
-
 import AppBar from "@mui/material/AppBar";
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -25,11 +24,14 @@ import PortfolioExposure from "../PortfolioExposure";
 import AssetAllocation from "../AssetAllocation";
 import Wallet from "../wallet";
 import DefiNames from "../DefiNames";
+import { useSelector } from "react-redux";
+import NoDataAssets from "../NoDataAssets";
+
 
 function ProtocolTab() {
   const [tabsOrientation, setTabsOrientation] = useState("horizontal");
   const [tabValue, setTabValue] = useState(0);
-
+  const { address, Id } = useSelector(state => state.app.wallet);
   useEffect(() => {
     // A function that sets the orientation state of the tabs.
     function handleTabsOrientation() {
@@ -69,30 +71,34 @@ function ProtocolTab() {
         </AppBar>
       </Grid>
       {tabValue === 0 &&
-      <Grid>
-        <PriceCardList />
-        <VuiBox
-          mb={3}
-        >
-          <Grid container spacing="18px">
-            <Grid item xs={12} md={12} lg={6} xl={6} xxl={6}>
-              <PortfolioExposure />
+      (address !== null ?
+        <Grid>
+          <PriceCardList />
+          <VuiBox
+            mb={3}
+          >
+            <Grid container spacing="18px">
+              <Grid item xs={12} md={12} lg={6} xl={6} xxl={6}>
+                <PortfolioExposure />
+              </Grid>
+              <Grid item xs={12} md={12} lg={6} xl={6} xxl={6}>
+                <AssetAllocation />
+              </Grid>
             </Grid>
-            <Grid item xs={12} md={12} lg={6} xl={6} xxl={6}>
-              <AssetAllocation />
-            </Grid>
-          </Grid>
-        </VuiBox>
-        <VuiBox mb={3}>
-          <Wallet/>
-        </VuiBox>
-        <VuiBox mb={3}>
-          <DefiNames/>
-        </VuiBox>
-      </Grid>
+          </VuiBox>
+          <VuiBox mb={3}>
+            <Wallet />
+          </VuiBox>
+          <VuiBox mb={3}>
+            <DefiNames />
+          </VuiBox>
+        </Grid> :
+        <Grid>
+          <NoDataAssets />
+        </Grid>)
       }
-      {tabValue === 1 && <PriceCardList />}
-      {tabValue === 2 && <PriceCardList />}
+      {tabValue === 1 && (address !== null ?<PriceCardList />:<NoDataAssets />)}
+      {tabValue === 2 && (address !== null ?<PriceCardList />:<NoDataAssets />)}
     </VuiBox>
   );
 }
