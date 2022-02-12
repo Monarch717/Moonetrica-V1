@@ -18,7 +18,6 @@ import Table from "examples/Tables/Table";
 
 
 // Data
-import data from "layouts/dashboard/components/Projects/data";
 
 import UnderlyingAssets from "../UnderlyingAssets";
 import authorsTableData from "./data";

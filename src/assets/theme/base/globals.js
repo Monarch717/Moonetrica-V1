@@ -6,7 +6,6 @@ Moonetrica Dashboard - v1.0.0
 
 // Moonetrica Dashboard React Base Styles
 import colors from "assets/theme/base/colors";
-import bgAdmin from "assets/images/body-background.png";
 
 const { info, dark } = colors;
 export default {

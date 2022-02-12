@@ -10,10 +10,6 @@ import CoinIcon from "assets/images/logos/moonetrica_coin_logo.png";
 // Data
 import LineChart from "examples/Charts/LineCharts/LineChart";
 import BarChart from "examples/Charts/BarCharts/BarChart";
-import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
-import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
-import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
-import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 import AdobeXD from "../../../../examples/Icons/AdobeXD";
 
 function AssetAllocation() {
@@ -61,10 +57,7 @@ function AssetAllocation() {
           })}
         >
           <Grid item xs={4} lg={3} xl={3}>
-            <BarChart
-              barChartData={barChartDataDashboard}
-              barChartOptions={barChartOptionsDashboard}
-            />
+
           </Grid>
           <Grid item xs={8} lg={9} xl={9}>
             <VuiBox mb={2}>

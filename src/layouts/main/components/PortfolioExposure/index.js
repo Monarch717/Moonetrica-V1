@@ -9,10 +9,6 @@ import { FaEllipsisH } from "react-icons/fa";
 // Data
 import LineChart from "examples/Charts/LineCharts/LineChart";
 import BarChart from "examples/Charts/BarCharts/BarChart";
-import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
-import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
-import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
-import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 
 function PortfolioExposure() {
 
@@ -47,10 +43,7 @@ function PortfolioExposure() {
         >
           <Grid container spacing="18px">
             <Grid item xs={12} lg={6} xl={6}>
-              <BarChart
-                barChartData={barChartDataDashboard}
-                barChartOptions={barChartOptionsDashboard}
-              />
+
             </Grid>
             <Grid item xs={12} lg={6} xl={6}>
 

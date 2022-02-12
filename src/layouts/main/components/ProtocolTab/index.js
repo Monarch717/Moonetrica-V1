@@ -9,8 +9,7 @@ import Grid from "@mui/material/Grid";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import { Card, LinearProgress, Stack } from "@mui/material";
-// Images
-import burceMars from "assets/images/avatar-simmmple.png";
+
 // Moonetrica Dashboard React base styles
 import breakpoints from "assets/theme/base/breakpoints";
 import VuiAvatar from "components/VuiAvatar";
