@@ -4,11 +4,15 @@
 
 ![Product Gif](https://i.ibb.co/3c5RJhh/Dashboard.png)
 
-#The main features:
+## The main features:
+
 :+1: connecting wallet and displaying information about all defi pools where user placed tokens.
-:shipit: display of analytics, how the price has changed, how profitability indicators in money and in % have changed, how amount of tokens change in liquidity pools
-- make it possible to collect reward from the pools (collect token that you earned)
-- Develop a token swap (marketplace where user will chose best rate from different DEX’s)
+
+:+1: display of analytics, how the price has changed, how profitability indicators in money and in % have changed, how amount of tokens change in liquidity pools
+
+:+1: make it possible to collect reward from the pools (collect token that you earned)
+
+:+1: Develop a token swap (marketplace where user will chose best rate from different DEX’s)
 
 ```
 yarn install
