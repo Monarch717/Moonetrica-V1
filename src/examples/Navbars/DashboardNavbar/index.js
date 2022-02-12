@@ -153,7 +153,7 @@ function DashboardNavbar({ absolute, light, isMini }) {
 
   useEffect(() => {
     if (error) {
-      toastr.error(error.name, 'Please change your network to ETH or BSC or Polygon!');
+      toastr.error(error.name, error.message);
     }
   }, [error])
 
