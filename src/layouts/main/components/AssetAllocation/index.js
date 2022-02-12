@@ -57,12 +57,12 @@ function AssetAllocation() {
           })}
         >
           <Grid item xs={12} lg={12} xl={12}>
-            <VuiBox mb={2}>
+            <VuiBox mb={5}>
               <Grid container spacing={3} alignItems={"center"}>
                 <Grid item xs={3} md={3} lg={3} xl={3}>
                   <VuiBox display="flex" alignItems="center">
                     <img src={CoinIcon} />
-                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="bold">
                       OMEN
                     </VuiTypography>
                   </VuiBox>
@@ -72,12 +72,12 @@ function AssetAllocation() {
                 </Grid>
               </Grid>
             </VuiBox>
-            <VuiBox mb={2}>
+            <VuiBox mb={5}>
               <Grid container spacing={3} alignItems={"center"}>
                 <Grid item xs={3} md={3} lg={3} xl={3}>
                   <VuiBox display="flex" alignItems="center">
                     <img src={CoinIcon} />
-                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="bold">
                       WMATIC
                     </VuiTypography>
                   </VuiBox>
@@ -87,12 +87,12 @@ function AssetAllocation() {
                 </Grid>
               </Grid>
             </VuiBox>
-            <VuiBox mb={2}>
+            <VuiBox mb={5}>
               <Grid container spacing={3} alignItems={"center"}>
                 <Grid item xs={3} md={3} lg={3} xl={3}>
                   <VuiBox display="flex" alignItems="center">
                     <img src={CoinIcon} />
-                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="bold">
                       MATIC
                     </VuiTypography>
                   </VuiBox>
@@ -102,12 +102,12 @@ function AssetAllocation() {
                 </Grid>
               </Grid>
             </VuiBox>
-            <VuiBox mb={2}>
+            <VuiBox mb={5}>
               <Grid container spacing={3} alignItems={"center"}>
                 <Grid item xs={3} md={3} lg={3} xl={3}>
                   <VuiBox display="flex" alignItems="center">
                     <img src={CoinIcon} />
-                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="bold">
                       QUICK
                     </VuiTypography>
                   </VuiBox>
@@ -117,18 +117,33 @@ function AssetAllocation() {
                 </Grid>
               </Grid>
             </VuiBox>
-            <VuiBox mb={2}>
+            <VuiBox mb={5}>
               <Grid container spacing={3} alignItems={"center"}>
                 <Grid item xs={3} md={3} lg={3} xl={3}>
                   <VuiBox display="flex" alignItems="center">
                     <img src={CoinIcon} />
-                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="bold">
                       TITAN
                     </VuiTypography>
                   </VuiBox>
                 </Grid>
                 <Grid item xs={9} md={9} lg={9} xl={9}>
                   <VuiProgress value="12" color={'warning'} />
+                </Grid>
+              </Grid>
+            </VuiBox>
+            <VuiBox mb={5}>
+              <Grid container spacing={3} alignItems={"center"}>
+                <Grid item xs={3} md={3} lg={3} xl={3}>
+                  <VuiBox display="flex" alignItems="center">
+                    <img src={CoinIcon} />
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="bold">
+                      Others
+                    </VuiTypography>
+                  </VuiBox>
+                </Grid>
+                <Grid item xs={9} md={9} lg={9} xl={9}>
+                  <VuiProgress value="2" color={'warning'} />
                 </Grid>
               </Grid>
             </VuiBox>
