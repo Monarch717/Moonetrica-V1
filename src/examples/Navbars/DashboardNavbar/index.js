@@ -1,9 +1,3 @@
-/*!
-
-Moonetrica Dashboard - v1.0.0
-
-*/
-
 import { useState, useEffect } from "react";
 
 // react-router components
@@ -16,7 +10,6 @@ import PropTypes from "prop-types";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
 import Icon from "@mui/material/Icon";
 import { Button } from "@mui/material";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
@@ -24,12 +17,9 @@ import LogoutIcon from "@mui/icons-material/Logout";
 
 // Moonetrica Dashboard React components
 import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
-import VuiInput from "components/VuiInput";
 
 // Moonetrica Dashboard React example components
 import Breadcrumbs from "examples/Breadcrumbs";
-import NotificationItem from "examples/Items/NotificationItem";
 
 // Custom styles for DashboardNavbar
 import {
@@ -48,8 +38,14 @@ import {
   setOpenConfigurator,
 } from "context";
 
-// Images
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
+import { useDispatch, useSelector } from "react-redux";
+//web3 wallet connect
+import { useWeb3React } from "@web3-react/core";
+import { injected } from "../../../layouts/main/components/Connectors";
+import Web3 from "web3";
+
+import { toastr } from "react-redux-toastr";
+import { setWallet } from "../../../slices/app";
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
@@ -92,9 +88,74 @@ function DashboardNavbar({ absolute, light, isMini }) {
   // Render the notifications menu
 
   //wallet connect
-  const walletConnect = () => {
-    return true;
+  const { address, Id } = useSelector(state => state.app.wallet);
+  const dispatcher = useDispatch();
+  const web3React = useWeb3React();
+  const { active, account, chainId, library, connector, error, activate, deactivate } = web3React
+
+  const walletConnect = async () => {
+    try {
+      await activate(injected);
+    } catch (ex) {
+      console.log(ex);
+    }
   };
+  const disconnect = async () => {
+    try {
+      deactivate();
+      dispatcher(setWallet({
+        address: null,
+        Id: null,
+      }));
+    } catch (ex) {
+      console.log(ex);
+    }
+  };
+
+
+
+  useEffect(() => {
+    if (active) {
+      switch (chainId) {
+        case 1:
+          toastr.success("Congratulation!", "ETH Mainnet Connected");
+          break;
+        case 3:
+          toastr.warning("Warning!", "Ropsten Testnet Connected");
+          break;
+        case 4:
+          toastr.warning("Warning!", "Rinkeby Testnet Connected");
+          break;
+        case 5:
+          toastr.warning("Warning!", "Gorli Testnet Connected");
+          break;
+        case 56:
+          toastr.success("Congratulation!", "BSC Mainnet Connected");
+          break;
+        case 97:
+          toastr.warning("Warning!", "BSC Testnet Connected");
+          break;
+        case 137:
+          toastr.success("Congratulation!", "Polygon Mainnet Connected");
+          break;
+        default:
+          toastr.error("Alert", "Please change your wallet network!");
+          break;
+      }
+
+      dispatcher(setWallet({
+        address: account,
+        Id: chainId,
+      }));
+    }
+
+  }, [active, account, chainId]);
+
+  useEffect(() => {
+    if (error) {
+      toastr.error(error.name, 'Please change your network to ETH or BSC or Polygon!');
+    }
+  }, [error])
 
   return (
     <AppBar
@@ -103,32 +164,39 @@ function DashboardNavbar({ absolute, light, isMini }) {
       sx={(theme) => navbar(theme, { transparentNavbar, absolute, light })}
     >
       <Toolbar sx={(theme) => navbarContainer(theme)}>
-        <VuiBox color="inherit" mb={{ xs: 1, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
+        <VuiBox color="inherit" mb={{ xs: 2, md: 0 }} sx={(theme) => navbarRow(theme, { isMini })}>
           <Breadcrumbs icon="home" title={route[route.length - 1]} route={route} light={light} />
+          <IconButton
+            size="large"
+            color="inherit"
+            sx={navbarMobileMenu}
+            onClick={handleMiniSidenav}
+          >
+            <Icon className={"text-white"}>{miniSidenav ? "menu_open" : "menu"}</Icon>
+          </IconButton>
         </VuiBox>
         {isMini ? null : (
           <VuiBox sx={(theme) => navbarRow(theme, { isMini })}>
-            <VuiBox color={light ? "white" : "inherit"}>
-              <Button variant="outlined" onClick={walletConnect} startIcon={<AccountBalanceWalletIcon />}>
-                Wallet Connect
-              </Button>
-              <IconButton
-                size="small"
-                color="inherit"
-                sx={navbarMobileMenu}
-                onClick={handleMiniSidenav}
-              >
-                <Icon className={"text-white"}>{miniSidenav ? "menu_open" : "menu"}</Icon>
-              </IconButton>
-              <IconButton
-                size="small"
-                color="inherit"
-                sx={navbarIconButton}
-                onClick={handleConfiguratorOpen}
-              >
-                <LogoutIcon />
-              </IconButton>
-            </VuiBox>
+            {address !== null ? <VuiBox color={light ? "white" : "inherit"} margin={"auto"}>
+                <Button variant="outlined" startIcon={<AccountBalanceWalletIcon />} disabled>
+                  {address.substr(0, 5)}...{address.substr(address.length - 5, address.length - 1)}
+                </Button>
+                <IconButton
+                  size="large"
+                  color="white"
+                  sx={navbarIconButton}
+                  onClick={disconnect}
+                >
+                  <LogoutIcon />
+                </IconButton>
+              </VuiBox> :
+              <VuiBox color={light ? "white" : "inherit"} margin={"auto"}>
+                <Button variant="outlined" onClick={walletConnect} startIcon={<AccountBalanceWalletIcon />}>
+                  Wallet Connect
+                </Button>
+              </VuiBox>
+            }
+
           </VuiBox>
         )}
       </Toolbar>

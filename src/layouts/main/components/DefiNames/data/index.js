@@ -27,6 +27,7 @@ import logoJira from "assets/images/small-logos/logo-jira.svg";
 import logoSlack from "assets/images/small-logos/logo-slack.svg";
 import logoWebDev from "assets/images/small-logos/logo-webdev.svg";
 import logoXD from "assets/images/small-logos/logo-xd.svg";
+import coinLogo from "assets/images/logos/moonetrica_coin_logo.png";
 
 function Completion({ value, color }) {
   return (
@@ -61,7 +62,7 @@ export default {
     {
       Asset: (
         <VuiBox display="flex" alignItems="center">
-          <AdobeXD size="20px" />
+          <img src={coinLogo} />
           <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
             WMATIC + OMEN
           </VuiTypography>
@@ -92,7 +93,7 @@ export default {
     {
       Asset: (
         <VuiBox display="flex" alignItems="center">
-          <AdobeXD size="20px" />
+          <img src={coinLogo} />
           <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
             Chakra Moonetrica Version
           </VuiTypography>

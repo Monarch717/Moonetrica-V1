@@ -43,7 +43,7 @@ function Wallet() {
       <VuiBox display="flex" justifyContent="space-between" alignItems="center" mb="32px">
         <VuiBox mb="auto" width={"70%"}>
           <Grid container alignItems={'baseline'} >
-              <VuiTypography color="white" variant="lg" mb="6px" fontWeight="bold" width={"5em"} gutterBottom>
+              <VuiTypography color="white" variant="lg" fontSize={'20'} mb="6px" fontWeight="bold" width={"5em"} gutterBottom>
                 Wallet
               </VuiTypography>
               <FormGroup>

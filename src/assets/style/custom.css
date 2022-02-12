@@ -108,3 +108,14 @@ p.MuiTypography-root.MuiTypography-body1{
     font-size: 14px;
     font-weight: 500;
 }
+
+/*wallet connect button*/
+.MuiBox-root .MuiButton-root.MuiButton-outlined {
+    color: #FFFFFF!important;
+    border: 1px solid #FFFFFF!important;
+}
+
+/*Toastr Style*/
+.redux-toastr{
+    font-size: 15px!important;
+}

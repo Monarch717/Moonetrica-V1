@@ -56,10 +56,7 @@ function AssetAllocation() {
             },
           })}
         >
-          <Grid item xs={4} lg={3} xl={3}>
-
-          </Grid>
-          <Grid item xs={8} lg={9} xl={9}>
+          <Grid item xs={12} lg={12} xl={12}>
             <VuiBox mb={2}>
               <Grid container spacing={3} alignItems={"center"}>
                 <Grid item xs={3} md={3} lg={3} xl={3}>

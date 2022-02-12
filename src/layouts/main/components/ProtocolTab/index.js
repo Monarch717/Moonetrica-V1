@@ -1,8 +1,4 @@
-/*!
 
-  Moonetrica Dashboard - v1.0.0
-
-*/
 import AppBar from "@mui/material/AppBar";
 // @mui material components
 import Grid from "@mui/material/Grid";
@@ -12,10 +8,10 @@ import { Card, LinearProgress, Stack } from "@mui/material";
 
 // Moonetrica Dashboard React base styles
 import breakpoints from "assets/theme/base/breakpoints";
-import VuiAvatar from "components/VuiAvatar";
+
 // Moonetrica Dashboard React components
 import VuiBox from "components/VuiBox";
-import PriceCard from "../PriceCard";
+
 // Moonetrica Dashboard React icons
 import { IoCube } from "react-icons/io5";
 import { IoDocument } from "react-icons/io5";

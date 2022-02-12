@@ -1,8 +1,3 @@
-/*!
-
-Moonetrica Dashboard - v1.0.0
-
-*/
 
 // Moonetrica Dashboard React layouts
 import Main from "layouts/main";
@@ -28,7 +23,7 @@ const routes = [
     key: "main",
     route: "/main",
     icon: <WbIridescentIcon size="15px" color="inherit" />,
-    component: Main,
+    component: '',
     noCollapse: true,
   },
   {
@@ -37,7 +32,7 @@ const routes = [
     key: "donate",
     route: "/donate",
     icon: <VolunteerActivismIcon size="15px" color="inherit" />,
-    component: Main,
+    component: '',
     noCollapse: true,
   },
   {
@@ -46,7 +41,7 @@ const routes = [
     key: "defi-protocols",
     route: "/protocols",
     icon: <TextSnippetIcon size="15px" color="inherit" />,
-    component: Main,
+    component: '',
     noCollapse: true,
   },
 ];

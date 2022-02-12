@@ -1,8 +1,3 @@
-/*!
-
-Moonetrica Dashboard - v1.0.0
-
-*/
 
 import { forwardRef } from "react";
 

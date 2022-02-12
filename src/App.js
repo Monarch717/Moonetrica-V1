@@ -41,6 +41,22 @@ import "./assets/style/custom.css";
 
 import "@fontsource/raleway/";
 
+//redux
+import {Provider} from "react-redux";
+import store from './store';
+import {PersistGate} from "redux-persist/integration/react";
+import persistStore from "redux-persist/es/persistStore";
+import ReduxToastr from "react-redux-toastr";
+// Wallet provider
+import { Web3ReactProvider } from "@web3-react/core";
+import Web3 from "web3";
+
+const getLibrary = (provider) => {
+  return new Web3(provider);
+};
+
+const persistor = persistStore(store)
+
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
   const { miniSidenav, direction, layout, openConfigurator, sidenavColor } = controller;
@@ -151,27 +167,43 @@ export default function App() {
       </ThemeProvider>
     </CacheProvider>
   ) : (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {layout === "dashboard" && (
-        <>
-          <Sidenav
-            color={sidenavColor}
-            brand="logo"
-            brandName=""
-            routes={routes}
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-          />
-          {/*<Configurator />*/}
-          {/*{configsButton}*/}
-        </>
-      )}
-      {/*{layout === "vr" && <Configurator />}*/}
-      <Switch>
-        {getRoutes(routes)}
-        <Redirect from="*" to="/dashboard" />
-      </Switch>
-    </ThemeProvider>
+    <Provider store={store}>
+      <PersistGate persistor={persistor} loading={(<p>Wait...</p>)}>
+        <ReduxToastr
+          timeout={2000}
+          newestOnTop={false}
+          preventDuplicates
+          position={"top-left"}
+          getState={(state) => state.toastr}
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+          progressBar
+          closeOnToastrClick />
+        <Web3ReactProvider getLibrary={getLibrary}>
+          <ThemeProvider theme={theme}>
+            <CssBaseline />
+            {layout === "dashboard" && (
+              <>
+                <Sidenav
+                  color={sidenavColor}
+                  brand="logo"
+                  brandName=""
+                  routes={routes}
+                  onMouseEnter={handleOnMouseEnter}
+                  onMouseLeave={handleOnMouseLeave}
+                />
+                {/*<Configurator />*/}
+                {/*{configsButton}*/}
+              </>
+            )}
+            {/*{layout === "vr" && <Configurator />}*/}
+            <Switch>
+              {getRoutes(routes)}
+              <Redirect from="*" to="/dashboard" />
+            </Switch>
+          </ThemeProvider>
+        </Web3ReactProvider>
+      </PersistGate>
+    </Provider>
   );
 }

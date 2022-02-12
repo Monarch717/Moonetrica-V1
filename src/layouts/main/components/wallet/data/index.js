@@ -5,15 +5,9 @@ import Tooltip from "@mui/material/Tooltip";
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
 import VuiAvatar from "components/VuiAvatar";
-import VuiProgress from "components/VuiProgress";
 
-// Images
-import AdobeXD from "examples/Icons/AdobeXD";
-import Atlassian from "examples/Icons/Atlassian";
-import Slack from "examples/Icons/Slack";
-import Spotify from "examples/Icons/Spotify";
-import Jira from "examples/Icons/Jira";
-import Invision from "examples/Icons/Invision";
+//Image
+import coinLogo from "../../../../../assets/images/logos/moonetrica_coin_logo.png";
 
 export default function data() {
   const avatars = (members) =>
@@ -53,7 +47,7 @@ export default function data() {
       {
         Assets: (
           <VuiBox display="flex" alignItems="center">
-            <AdobeXD size="20px" />
+            <img src={coinLogo} />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               WMATIC
             </VuiTypography>
@@ -78,7 +72,7 @@ export default function data() {
       {
         Assets: (
           <VuiBox display="flex" alignItems="center">
-            <Atlassian size="20px" />
+            <img src={coinLogo} />
             <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
               MATIC
             </VuiTypography>
