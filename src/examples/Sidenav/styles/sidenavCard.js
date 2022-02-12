@@ -1,5 +1,5 @@
 // Images
-import backgroundImage from "assets/images/sidenav/sidenav-card-background.png";
+// import backgroundImage from "assets/images/sidenav/sidenav-card-background.png";
 
 function card(theme, ownerState) {
   const { borders, functions, transitions, breakpoints } = theme;
@@ -7,6 +7,7 @@ function card(theme, ownerState) {
 
   const { borderRadius } = borders;
   const { pxToRem } = functions;
+  const  backgroundImage = '';
 
   return {
     minWidth: "auto",
@@ -15,6 +16,7 @@ function card(theme, ownerState) {
     backgroundSize: "cover",
     borderRadius: borderRadius.xl,
     boxShadow: "none",
+    backdropFilter: "unset",
 
     [breakpoints.up("xl")]: {
       maxHeight: miniSidenav ? pxToRem(64) : pxToRem(192),

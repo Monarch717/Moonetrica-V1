@@ -5,7 +5,8 @@ import { Card, Stack, Grid } from "@mui/material";
 import VuiTypography from "components/VuiTypography";
 import linearGradient from "../../../../assets/theme/functions/linearGradient";
 import { FaEllipsisH } from "react-icons/fa";
-
+import VuiProgress from "components/VuiProgress";
+import CoinIcon from "assets/images/logos/moonetrica_coin_logo.png";
 // Data
 import LineChart from "examples/Charts/LineCharts/LineChart";
 import BarChart from "examples/Charts/BarCharts/BarChart";
@@ -13,6 +14,7 @@ import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
 import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
 import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
 import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
+import AdobeXD from "../../../../examples/Icons/AdobeXD";
 
 function AssetAllocation() {
 
@@ -65,7 +67,81 @@ function AssetAllocation() {
             />
           </Grid>
           <Grid item xs={8} lg={9} xl={9}>
-            
+            <VuiBox mb={2}>
+              <Grid container spacing={3} alignItems={"center"}>
+                <Grid item xs={3} md={3} lg={3} xl={3}>
+                  <VuiBox display="flex" alignItems="center">
+                    <img src={CoinIcon} />
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                      OMEN
+                    </VuiTypography>
+                  </VuiBox>
+                </Grid>
+                <Grid item xs={9} md={9} lg={9} xl={9}>
+                  <VuiProgress value="76" color={'warning'} />
+                </Grid>
+              </Grid>
+            </VuiBox>
+            <VuiBox mb={2}>
+              <Grid container spacing={3} alignItems={"center"}>
+                <Grid item xs={3} md={3} lg={3} xl={3}>
+                  <VuiBox display="flex" alignItems="center">
+                    <img src={CoinIcon} />
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                      WMATIC
+                    </VuiTypography>
+                  </VuiBox>
+                </Grid>
+                <Grid item xs={9} md={9} lg={9} xl={9}>
+                  <VuiProgress value="55" color={'warning'} />
+                </Grid>
+              </Grid>
+            </VuiBox>
+            <VuiBox mb={2}>
+              <Grid container spacing={3} alignItems={"center"}>
+                <Grid item xs={3} md={3} lg={3} xl={3}>
+                  <VuiBox display="flex" alignItems="center">
+                    <img src={CoinIcon} />
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                      MATIC
+                    </VuiTypography>
+                  </VuiBox>
+                </Grid>
+                <Grid item xs={9} md={9} lg={9} xl={9}>
+                  <VuiProgress value="35" color={'warning'} />
+                </Grid>
+              </Grid>
+            </VuiBox>
+            <VuiBox mb={2}>
+              <Grid container spacing={3} alignItems={"center"}>
+                <Grid item xs={3} md={3} lg={3} xl={3}>
+                  <VuiBox display="flex" alignItems="center">
+                    <img src={CoinIcon} />
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                      QUICK
+                    </VuiTypography>
+                  </VuiBox>
+                </Grid>
+                <Grid item xs={9} md={9} lg={9} xl={9}>
+                  <VuiProgress value="25" color={'warning'} />
+                </Grid>
+              </Grid>
+            </VuiBox>
+            <VuiBox mb={2}>
+              <Grid container spacing={3} alignItems={"center"}>
+                <Grid item xs={3} md={3} lg={3} xl={3}>
+                  <VuiBox display="flex" alignItems="center">
+                    <img src={CoinIcon} />
+                    <VuiTypography pl="16px" color="white" variant="button" fontWeight="medium">
+                      TITAN
+                    </VuiTypography>
+                  </VuiBox>
+                </Grid>
+                <Grid item xs={9} md={9} lg={9} xl={9}>
+                  <VuiProgress value="12" color={'warning'} />
+                </Grid>
+              </Grid>
+            </VuiBox>
           </Grid>
         </VuiBox>
 

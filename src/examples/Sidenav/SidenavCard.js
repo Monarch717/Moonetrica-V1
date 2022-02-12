@@ -20,6 +20,7 @@ import { card, cardContent, cardIconBox, cardIcon } from "examples/Sidenav/style
 
 // Moonetrica Dashboard React context
 import { useVisionUIController } from "context";
+import sideLogo from "assets/images/logos/moonetrica_footer_logo.png";
 
 function SidenavCard({ color, ...rest }) {
   const [controller] = useVisionUIController();
@@ -28,17 +29,7 @@ function SidenavCard({ color, ...rest }) {
   return (
     <Card sx={(theme) => card(theme, { miniSidenav })}>
       <CardContent sx={(theme) => cardContent(theme, { sidenavColor })}>
-        <VuiBox
-          bgColor="white"
-          width="2rem"
-          height="2rem"
-          borderRadius="md"
-          shadow="md"
-          mb={2}
-          sx={cardIconBox}
-        >
-
-        </VuiBox>
+        <img src={sideLogo} />
       </CardContent>
     </Card>
   );

@@ -34,7 +34,7 @@ body, button, .MuiBox-root, .MuiTypography-root{
     color: #FFFFFF!important;
     opacity: 1!important;
     font-weight: bold!important;
-    border-bottom: 3px solid;
+    border-bottom: 2px solid;
     border-color: white;
 }
 
@@ -75,4 +75,29 @@ body, button, .MuiBox-root, .MuiTypography-root{
     line-height: 19px;
     backdrop-filter: unset;
     box-shadow: none;
+}
+
+/*checkbox*/
+
+.MuiFormControlLabel-root .MuiFormControlLabel-label{
+    color: white!important;
+    font-size: 14px;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+}
+.MuiButtonBase-root.MuiCheckbox-root.Mui-checked{
+    border: 2px solid white!important;
+}
+.MuiButtonBase-root.MuiCheckbox-root{
+    border: 2px solid white!important;
+}
+.MuiBox-root .MuiTableContainer-root{
+    box-shadow: none!important;
+}
+.MuiTableRow-root:not(:last-child) td{
+    border-bottom: none!important;
+}
+.MuiTableRow-root th{
+    border-bottom: none!important;
 }

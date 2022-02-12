@@ -214,7 +214,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
         })}
       >
         <SidenavCard color={color} />
-        <VuiBox mt={2}>
+        <VuiBox mt={0}>
           <VuiButton
             component="a"
             href="#"
@@ -223,7 +223,7 @@ function Sidenav({ color, brandName, routes, ...rest }) {
             color={color}
             fullWidth
           >
-            @2022, Moonetrica
+            Moonetrica, @2022
           </VuiButton>
         </VuiBox>
       </VuiBox>
