@@ -101,3 +101,10 @@ body, button, .MuiBox-root, .MuiTypography-root{
 .MuiTableRow-root th{
     border-bottom: none!important;
 }
+
+/*sidenave*/
+p.MuiTypography-root.MuiTypography-body1{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+}

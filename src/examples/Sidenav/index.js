@@ -215,16 +215,11 @@ function Sidenav({ color, brandName, routes, ...rest }) {
       >
         <SidenavCard color={color} />
         <VuiBox mt={0}>
-          <VuiButton
-            component="a"
-            href="#"
-            rel="noreferrer"
-            variant="gradient"
-            color={color}
-            fullWidth
+          <VuiTypography
+            color={"white"} opacity={0.5} verticalAlign={'center'} fontSize={'14px'} fontWeight={'500'}
           >
             Moonetrica, @2022
-          </VuiButton>
+          </VuiTypography>
         </VuiBox>
       </VuiBox>
     </SidenavRoot>
