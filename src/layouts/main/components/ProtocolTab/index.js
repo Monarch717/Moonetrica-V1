@@ -11,11 +11,7 @@ import breakpoints from "assets/theme/base/breakpoints";
 // Moonetrica Dashboard React components
 import VuiBox from "components/VuiBox";
 
-// Moonetrica Dashboard React icons
-import { IoCube } from "react-icons/io5";
-import { IoDocument } from "react-icons/io5";
-import { IoBuild } from "react-icons/io5";
-
+// Moonetrica Dashboard icons
 import allCoin from "assets/images/small-logos/all-coin.png";
 import EthLogo from "assets/images/small-logos/icons8-ethereum.png";
 import PolygonLogo from "assets/images/small-logos/icon-polygon.png";
@@ -70,7 +66,8 @@ function ProtocolTab() {
           >
             <Tab label="All" icon={<img src={allCoin} />} value={0} />
             <Tab label="Ethereum" icon={<img src={EthLogo} />} value={1} />
-            <Tab label="Polygon" icon={<img src={PolygonLogo} />} value={2} />
+            <Tab label="BSC" icon={<img src={EthLogo} />} value={2} />
+            <Tab label="Polygon" icon={<img src={PolygonLogo} />} value={3} />
           </Tabs>
         </AppBar>
       </Grid>
@@ -103,6 +100,7 @@ function ProtocolTab() {
       }
       {tabValue === 1 && (address !== null ?<PriceCardList />:<NoDataAssets />)}
       {tabValue === 2 && (address !== null ?<PriceCardList />:<NoDataAssets />)}
+      {tabValue === 3 && (address !== null ?<PriceCardList />:<NoDataAssets />)}
     </VuiBox>
   );
 }
